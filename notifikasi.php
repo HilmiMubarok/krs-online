@@ -36,6 +36,9 @@
 			<?php if (!$status[0]) : ?>
 				<img src="assets/img/img_empty.svg">
 				<h1 class="h1-notif"> Kamu Belum Mengambil KRS </h1>
+			<?php elseif ($status[0] == 2) : ?>
+				<img src="assets/img/img_empty.svg">
+				<h1 class="h1-notif"> Pengambilan KRS Kamu Sedang Ditinjau oleh Admin </h1>
 			<?php elseif ($status[0] == 0) : ?>
 				<img src="assets/img/img_cancel.svg">
 				<h1 class="h1-notif"> Pengambilan KRS Kamu Ditolak </h1>

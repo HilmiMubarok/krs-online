@@ -38,25 +38,60 @@
 					<label>Semester</label>
 					<select name="semester" class="semester">
 						<option value="">Pilih Semester</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
 					</select>
 					<label>Program Studi</label>
 					<select name="prodi" class="prodi">
 						<option value="">Pilih Program Studi</option>
+						<option value="Teknik Informatika">Teknik Informatika</option>
+						<option value="Hukum">Hukum</option>
+						<option value="Ilmu Pemerintahan">Ilmu Pemerintahan</option>
+						<option value="Akuntansi dan Ekonomi">Akuntansi dan Ekonomi</option>
 					</select>
-					<button type="submit" name="btn-ambil-krs">
-						Ambil KRS
-					</button>
+					<?php if ($status[0] !== null): ?>
+						
+						<button disabled>
+							Ambil KRS
+						</button>
+					<?php else: ?>
+						<button type="submit" name="btn-ambil-krs">
+							Ambil KRS
+						</button>	
+					<?php endif ?>
 				</form>
 			</div>
-			<div class="notif gagal">
-				asdasdasd <br>
-				asdasdasd
-				asdasdasd <br>
-				asdasdasd <br>
-				asdasdasd <br>
-				asdasdasd <br>
-				asdasdasd <br>
-			</div>
+
+			<?php
+
+				if (isset($_POST['btn-ambil-krs'])) {
+					$smt   = $_POST['semester'];
+					$prodi = $_POST['prodi'];
+
+					$query = "SELECT * FROM mata_kuliah WHERE semester = '$smt' AND prodi = '$prodi' ";
+					$res = mysqli_query($conn, $query);
+					$row = [];
+					while ($rows = mysqli_fetch_assoc($res)) {
+						$query = "INSERT INTO pengambilan VALUES ('', '$_SESSION[nim]', '$rows[id_makul]')";
+						mysqli_query($conn, $query);
+
+
+					}
+					$query = "UPDATE user SET status = '2' WHERE nim = '$_SESSION[nim]' ";
+					mysqli_query($conn, $query); ?>
+					<div class="notif sukses">
+						Terimakasih Telah Mengambil KRS. <br>
+						Silahkan Tunggu Notifikasi dari Admin.
+					</div>
+				<?php }
+
+			?>
 		</div>
 	</div>
 
