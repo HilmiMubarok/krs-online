@@ -108,13 +108,13 @@ body {
 .content h1 {
 	text-align: center;
 	position: absolute;
-	left: 50%; top: 70%;
+	left: 50%; top: 62%;
 	transform: translate(-50%, 70%);
 	/*top: 20px;*/
 }
 
 .content .h1-notif {
-	top: 450px;
+	top: 430px;
 }
 
 .form-krs {

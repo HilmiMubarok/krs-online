@@ -33,6 +33,12 @@
 			</ul>
 		</div>
 		<div class="content">
+			<?php if ($status[0] !== null): ?>
+				<img src="assets/img/img_dont.svg">
+				<h1 class="h1-notif">
+					Kamu Sudah Melakukan Pengambilan KRS
+				</h1>
+			<?php else: ?>
 			<div class="form-krs">
 				<form method="POST">
 					<label>Semester</label>
@@ -54,19 +60,13 @@
 						<option value="Hukum">Hukum</option>
 						<option value="Ilmu Pemerintahan">Ilmu Pemerintahan</option>
 						<option value="Akuntansi dan Ekonomi">Akuntansi dan Ekonomi</option>
-					</select>
-					<?php if ($status[0] !== null): ?>
-						
-						<button disabled>
-							Ambil KRS
-						</button>
-					<?php else: ?>
-						<button type="submit" name="btn-ambil-krs">
-							Ambil KRS
-						</button>	
-					<?php endif ?>
+					</select>				
+					<button type="submit" name="btn-ambil-krs">
+						Ambil KRS
+					</button>	
 				</form>
 			</div>
+			<?php endif ?>
 
 			<?php
 
