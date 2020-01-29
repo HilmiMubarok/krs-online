@@ -9,8 +9,6 @@
 <body>
 	
 	<div class="index">
-		
-		
 		<div class="wrapper">
 			<div class="left">
 				<h1>
@@ -35,8 +33,6 @@
 				<img src="assets/img/bg_home.svg" width="500">
 			</div>
 		</div>
-
-
 	</div>
 
 </body>

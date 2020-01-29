@@ -7,9 +7,7 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	
 	<div class="register">
-
 		<?php
 			if (isset($_POST['btn-register'])) {
 
@@ -35,8 +33,6 @@
 				}
 			}
 		?>
-		
-
 		<div class="left">
 			<img src="assets/img/bg_register.svg">
 		</div>
