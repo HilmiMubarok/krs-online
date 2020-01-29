@@ -36,15 +36,18 @@
 			<?php if (!$status[0]) : ?>
 				<img src="assets/img/img_empty.svg">
 				<h1 class="h1-notif"> Kamu Belum Mengambil KRS </h1>
-			<?php elseif ($status[0] == 2) : ?>
+			<?php elseif ($status[0] == 1) : ?>
 				<img src="assets/img/img_pending.svg">
 				<h1 class="h1-notif"> Pengambilan KRS Kamu Sedang Ditinjau oleh Admin </h1>
-			<?php elseif ($status[0] == 0) : ?>
+			<?php elseif ($status[0] == 2) : ?>
 				<img src="assets/img/img_cancel.svg">
 				<h1 class="h1-notif"> Pengambilan KRS Kamu Ditolak </h1>
 			<?php else : ?>
 				<img src="assets/img/img_acc.svg">
 				<h1 class="h1-notif"> Pengambilan KRS Kamu Disetujui </h1>
+				<a class="btn-cetak" href="cetak.php?nim=<?= $_SESSION['nim'] ?>" target="_blank">
+					<button>Cetak</button>
+				</a>
 			<?php endif ?>
 		</div>
 	</div>

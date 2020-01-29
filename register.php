@@ -24,7 +24,7 @@
 					echo '<div class="notif gagal">User Sudah Ada! Silahkan Coba Lagi</div>';
 					echo "<meta http-equiv='refresh' content='3;register.php'>";
 				} else {
-					$query = "INSERT INTO user VALUES ('$nim', '$nama', '$password', null) ";
+					$query = "INSERT INTO user VALUES ('$nim', '$nama', '$password', '0') ";
 					if (mysqli_query($conn, $query)) {
 						echo '<div class="notif sukses">Register Sukses! Silahkan Login</div>';
 						echo "<meta http-equiv='refresh' content='3;login.php'>";

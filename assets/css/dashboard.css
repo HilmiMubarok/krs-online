@@ -34,7 +34,6 @@ a { text-decoration: none; }
 
 /* Body */
 body {
-	/*background: linear-gradient(to right, #348F50, #56B4D3)*/
 	background: linear-gradient(to right, #bbb, #888);
 }
 
@@ -95,7 +94,6 @@ body {
 	padding: 20px;
 	width: 75%;
 	right: 0;
-	/*background-color: rgba(0, 0, 0, .3);*/
 }
 
 .content img {
@@ -108,13 +106,33 @@ body {
 .content h1 {
 	text-align: center;
 	position: absolute;
-	left: 50%; top: 62%;
+	left: 50%; top: 65%;
 	transform: translate(-50%, 70%);
-	/*top: 20px;*/
 }
 
 .content .h1-notif {
-	top: 430px;
+	top: 450px;
+}
+
+.content .btn-cetak {
+	position: absolute;
+	top: 92%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content .btn-cetak button {
+	padding: 10px;
+	width: 100px;
+	border: none;
+	background-color: salmon;
+	font-size: 16px;
+	border-radius: 5px;
+	color: white;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, .4);
+}
+
+.content .btn-cetak button:hover {
+	cursor: pointer;
 }
 
 .form-krs {
@@ -163,3 +181,54 @@ body {
 .form-krs button:hover {
 	cursor: pointer;
 }
+
+.admin {
+	padding: 10px;
+	width: 90%;
+	max-height: 450px;
+	overflow: auto;
+	margin: auto;
+}
+
+.admin h2 {
+	font-size: 30px;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+.admin table {
+	width: 70%;
+	border: 2px solid teal;
+}
+
+.admin table tr th, .admin table tr td {
+	border: 2px solid teal;
+	padding: 5px;
+}
+
+.admin .btn-tinjau {
+	border: none;
+	background-color: teal;
+	color: #FFF;
+	padding: 10px;
+	width: 60%;
+	border-radius: 5px;
+}
+
+.admin .btn-tinjau:hover, .admin .btn-actions button:hover {
+	cursor: pointer;
+	box-shadow: 1px 2px 3px rgba(0,0,0,.3);
+}
+
+.admin .btn-actions button {
+	margin-top: 50px;
+	border: none;
+	padding: 12px;
+	font-size: 16px;
+	width: 100px;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+
+.admin .btn-actions .btn-acc { background-color: teal; color: white }
+.admin .btn-actions .btn-reject { background-color: salmon; color: white }
